@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "270958907805",
+    "project_id": "trampolas-81db6",
+    "storage_bucket": "trampolas-81db6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:270958907805:android:e63aabf77e9a3de4dadf74",
+        "android_client_info": {
+          "package_name": "com.trampolas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "270958907805-8hfk2af12roblas1v20o4nsd6iqkqp7i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF2vbLWPm-cJ0dUxxkK7W8vi1M_Jbo43o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "270958907805-8hfk2af12roblas1v20o4nsd6iqkqp7i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -20,6 +20,7 @@ import { useFonts } from 'expo-font';
 import Home from './Home.js';
 import Buscar from './Buscar.js';
 import Perfil from './Perfil.js';
+import Login from './Login.js';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -58,6 +59,7 @@ export default function App() {
           }}
         />
         <Stack.Screen name="Buscar" component={Buscar} />
+        <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Perfil" component={Perfil} options={{headerShown:false}}/>
       </Stack.Navigator>
     </NavigationContainer>

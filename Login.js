@@ -4,30 +4,8 @@ import { Avatar, Badge, Icon, withBadge, Button } from 'react-native-elements';
 import { SafeAreaView } from "react-native-safe-area-context";
 import Octicons from "react-native-vector-icons/Octicons";
 import Ionicons from "react-native-vector-icons/Ionicons"
-import AppLoading from 'expo-app-loading';
 
-import {
-    Roboto_400Regular
-} from '@expo-google-fonts/roboto';
-import {
-    Lobster_400Regular
-} from '@expo-google-fonts/lobster';
-
-import { useFonts } from 'expo-font';
-
-export default function Perfil({ navigation }) {
-    const [modalVisible, setModalVisible] = useState(false);
-
-    let [fontsLoaded] = useFonts({
-        Roboto_400Regular,
-        Lobster_400Regular,
-    });
-
-    if (!fontsLoaded) {
-        return <AppLoading />
-    }
-
-
+export default function Login({ navigation }) {
     return (
         <SafeAreaView style={styles.container}>
             <View style={{ flexDirection: 'row' }}>
