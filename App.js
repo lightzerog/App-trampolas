@@ -21,6 +21,7 @@ import Home from './Home.js';
 import Buscar from './Buscar.js';
 import Perfil from './Perfil.js';
 import Login from './Login.js';
+import Cadastro from './Cadastro.js'
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -40,7 +41,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home" options={{backgroundColor: '#E6DDFF',}}>
+      <Stack.Navigator initialRouteName="Cadastro">
         <Stack.Screen
           name="Home"
           component={Home}
@@ -59,7 +60,8 @@ export default function App() {
           }}
         />
         <Stack.Screen name="Buscar" component={Buscar} />
-        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Login" component={Login} options={{headerShown:false}} />
+        <Stack.Screen name="Cadastro" component={Cadastro} options={{headerShown:false}} />
         <Stack.Screen name="Perfil" component={Perfil} options={{headerShown:false}}/>
       </Stack.Navigator>
     </NavigationContainer>

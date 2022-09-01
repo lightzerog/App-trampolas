@@ -1,10 +1,9 @@
 import { TextInput, StatusBar, KeyboardAvoidingView, StyleSheet, Text, View, Button, ScrollView, Image, TouchableOpacity } from 'react-native';
 import { Icon } from 'react-native-elements';
-import * as React from 'react';
-import Tweets from './Tweets';
+import React, { useState } from 'react';
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
-import logo from './assets/logo.png';
+import DatePicker from 'react-native-date-picker';
 
 import {
     Roboto_300Light,
@@ -15,7 +14,9 @@ import {
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 
-export default function Login({ navigation }) {
+export default function Cadastro({ navigation }) {
+    
+
     let [fontsLoaded] = useFonts({
         Roboto_300Light,
         Roboto_400Regular,
@@ -28,7 +29,6 @@ export default function Login({ navigation }) {
     }
 
     return (
-
         <SafeAreaView style={styles.containerMain}>
             <StatusBar
                 barStyle='light-content'
@@ -36,17 +36,14 @@ export default function Login({ navigation }) {
                 hidden={false}
             />
             <View style={styles.logoAnimadoLogin}>
-                <Text style={styles.textoChamativoApp}>um montão de coisas pro seu smartphone</Text>
-                <Text style={styles.textoChamativo2App}>seja smart e facilite-se :)</Text>
-                <Image source={logo}
-                    style={styles.logoImagem} />
-                <View style={{ flexDirection: 'row', marginTop: -25 }}>
+                <View style={{ flexDirection: 'row', marginTop: 10 }}>
                     <Text style={styles.logoTextoSmar}>smar</Text>
                     <Text style={styles.logoTextoThings}>things</Text>
                 </View>
+                <Text style={styles.logoTextoCadastrese}>cadastre-se aqui</Text>
             </View>
 
-            <Text style={styles.textoLogin}>complete o login para continuar  ></Text>
+            <Text style={styles.textoLogin}>preencha tudo e pronto, é rapidinho</Text>
 
             <TextInput style={styles.formEmail}
                 placeholder="email"
@@ -54,6 +51,8 @@ export default function Login({ navigation }) {
             <TextInput style={styles.formSenha}
                 placeholder="senha"
             />
+
+
 
             <TouchableOpacity style={styles.botaoLogin}>
                 <Text style={styles.BotaoLoginTexto}>fazer login</Text>
@@ -66,7 +65,6 @@ export default function Login({ navigation }) {
 
             <TouchableOpacity><Text style={styles.textoEsqueceuSenhaBold}>esqueceu a senha?</Text></TouchableOpacity>
         </SafeAreaView>
-
     );
 }
 
@@ -76,7 +74,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffffff', flex: 1,
     },
     logoAnimadoLogin: {
-        alignItems: 'center', backgroundColor: '#222222', height: '40%', borderBottomLeftRadius: 20, borderBottomRightRadius: 20, shadowColor: 'black'
+        alignItems: 'center', backgroundColor: '#222222', height: '15%', borderBottomLeftRadius: 20, borderBottomRightRadius: 20, shadowColor: 'black'
     },
     textoChamativoApp: {
         color: '#7e32b5', fontSize: 16, fontFamily: 'Roboto_300Light', marginTop: '15%'
@@ -89,6 +87,9 @@ const styles = StyleSheet.create({
     },
     logoTextoThings: {
         color: '#ff136a', fontSize: 26, fontFamily: 'Roboto_700Bold',
+    },
+    logoTextoCadastrese: {
+        color: '#ffffff', fontSize: 18, fontFamily: 'Roboto_700Bold', marginTop: 20
     },
     logoImagem: {
         width: 160, height: 160, marginTop: '5%'
@@ -103,13 +104,13 @@ const styles = StyleSheet.create({
         alignSelf: 'center', fontSize: 18, fontWeight: 'bold', marginTop: 2, color: '#373737', marginTop: '15%'
     },
     textoCadastroView: {
-        flexDirection:'row', alignSelf:'center', marginTop:10
-   },
+        flexDirection: 'row', alignSelf: 'center', marginTop: 10
+    },
     textoCadastro: {
-         fontSize: 14, fontWeight: 'normal', color: '#373737', 
+        fontSize: 14, fontWeight: 'normal', color: '#373737',
     },
     textoCadastroBold: {
-        fontSize: 16, fontWeight: 'bold', color: '#373737', marginTop:-2.5, marginLeft:5
+        fontSize: 16, fontWeight: 'bold', color: '#373737', marginTop: -2.5, marginLeft: 5
     },
     textoEsqueceuSenhaBold: {
         alignSelf: 'center', fontSize: 14, fontWeight: 'bold', color: '#373737', marginTop: 5
